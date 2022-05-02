@@ -54,6 +54,11 @@
             <version>3.22.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+	    	<groupId>net.serenity-bdd</groupId>
+	    	<artifactId>serenity-rest-assured</artifactId>
+	    <version>3.2.4</version>
+		</dependency>
     </dependencies>
     <build>
         <plugins>
