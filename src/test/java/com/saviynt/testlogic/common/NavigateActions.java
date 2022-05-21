@@ -1,4 +1,4 @@
-package com.saviynt.tests.ars;
+package com.saviynt.testlogic.common;
 
 import net.serenitybdd.core.steps.UIInteractions;
 import net.thucydides.core.annotations.Step;

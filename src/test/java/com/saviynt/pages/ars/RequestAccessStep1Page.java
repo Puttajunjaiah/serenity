@@ -1,11 +1,12 @@
 package com.saviynt.pages.ars;
 
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import net.serenitybdd.core.pages.PageComponent;
 import net.serenitybdd.core.pages.WebElementFacade;
 
-public class RequestAccessStep1Page extends PageComponent{
+public class RequestAccessStep1Page extends PageComponent {
 	
 	@FindBy(xpath="//*[@id='applicationlist']//a[@aria-label='Add to Cart']")
     private WebElementFacade addToCart;
@@ -19,27 +20,13 @@ public class RequestAccessStep1Page extends PageComponent{
 	@FindBy(id="arsReqAcessCheckout")
     private WebElementFacade checkoutButton;
 	
-	@FindBy(id="nxtButton")
-    private WebElementFacade nextButton;
-	
-	@FindBy(id="requestSubmit1")
-    private WebElementFacade finalSubmitButton;
-	
-	@FindBy(css="div.note-success p")
-    private WebElementFacade requestSubmitMessage;
-	
 	@FindBy(id="applicationlist_processing")
     private WebElementFacade processingAnimation;
 	
-	
+	@FindBy(id="dtsearch_applicationlist")
+	private WebElementFacade searchInputField;
 	
 	public void clickAddToCart() {
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		addToCart.click();
 	}
 	
@@ -55,21 +42,8 @@ public class RequestAccessStep1Page extends PageComponent{
 		checkoutButton.click();
 	}
 	
-	public void clickNextButton() {
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		nextButton.click();
+	public void enterSearchTextAndPressEnter(String searchText) {
+		searchInputField.typeAndEnter(searchText);
 	}
 	
-	public void clickFinalSubmitButton() {
-		finalSubmitButton.click();
-	}
-	
-	public String getRequestSubmitSuccessfulMessage() {
-		return requestSubmitMessage.getText();
-	}
 }

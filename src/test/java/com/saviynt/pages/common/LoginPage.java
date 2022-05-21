@@ -27,9 +27,4 @@ public class LoginPage extends PageComponent {
     	submitButton.click();
     }
     
-    public void login(String username, String password) {
-    	enterUsername(username);
-    	enterPassword(password);
-    	clickSubmitButton();
-    }
 }
