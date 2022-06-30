@@ -1,3 +1,8 @@
+# Architecture
+
+![image](https://user-images.githubusercontent.com/1897593/176657885-1e7b31ce-f98e-4fca-ae9b-caefc1ea0e02.png)
+
+
 # Serenity JUnit Starter project
 
 Get started quickly with Serenity BDD and JUnit 5 with this simple starter project. 
